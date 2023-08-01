@@ -2,10 +2,10 @@
 const switchesModel = require("./../models/switchesModel");
 
 // Obtener lista de switches
-exports.getSwitcheslist = async(req,res) => {
+exports.getSwitchesList = async(req,res) => {
     // Ejecuta el metodo del model para obtener la lista, si presenta error devolverá un error 500
     try {
-        const switches = await switchesModel.getSwitcheslist();
+        const switches = await switchesModel.getSwitchesList();
         res.status(200).json({
             sucess: true,
             data: switches,
@@ -13,11 +13,12 @@ exports.getSwitcheslist = async(req,res) => {
         })
     } catch (error) {
         res.status(500).json({
-            sucess: true,
+            sucess: false,
             message:`Error al obtener la lista de switches:
             ${{error}}`,
             data:null
         })
+        console.log(error)
     }
 };
 

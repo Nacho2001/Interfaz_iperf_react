@@ -4,7 +4,7 @@ const db = require("../config/db");
 
 //Modelos
 // Obtener switches de lista
-exports.getSwitchesList() = async () => {
+exports.getSwitchesList = async () => {
     const [rows,fields] = await db.execute("select id,switch from switches");
     return rows;
 };
