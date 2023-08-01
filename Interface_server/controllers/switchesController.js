@@ -80,8 +80,8 @@ exports.getDailyAverageValues = async (req,res) => {
 
 // Obtener valores de promedio semanal
 exports.getWeeklyAverageValues = async (req,res) => {
+    const ubicacion = req.params.ubicacion;
     try {
-        const ubicacion = req.params.ubicacion;
         const weeklyValues = await switchesModel.getWeeklyAverageValues(ubicacion);
         if (weeklyValues == "") {
             res.status(404).json({
@@ -97,6 +97,7 @@ exports.getWeeklyAverageValues = async (req,res) => {
             })
         }
     } catch (error) {
+        console.log(error)
         res.status(500).json({
             success:false,
             data:null,

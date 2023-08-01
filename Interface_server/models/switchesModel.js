@@ -23,12 +23,12 @@ exports.getDailyAverageValues = async (ubicacion) => {
 
 // Obtener promedio semanal de switch
 exports.getWeeklyAverageValues = async (ubicacion) => {
-    const [rows,fields] = db.execute("select medido from semanal_ps where ubicacion = ?", [id]);
+    const [rows,fields] = await db.execute("select medido from semanal_ps where switch = ?", [ubicacion]);
     return rows;
 };
 
 // Obtener promedio mensual de switch
 exports.getMonthlyAverageValues = async (ubicacion) => {
-    const [rows, fields] = await db.execute("select medido from mensual_ps where ubicacion = ?", [ubicacion]);
+    const [rows, fields] = await db.execute("select medido from mensual_ps where switch = ?", [ubicacion]);
     return rows;
 };
