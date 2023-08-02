@@ -1,9 +1,12 @@
 import React from 'react';
 function SwitchesScreen(){
     return (
-        <>
-            <h3>Seleccionar switch</h3>
-        </>
+        <div className="ms-8">
+            <h3>Seleccionar Switch</h3>
+            <select>
+                <option value="">Elegir...</option>
+            </select>
+        </div>
     );
 }
 
