@@ -1,10 +1,10 @@
-div{
-  background-color: rgba(204, 204, 204, 0.74);
-  align-items: center;
+#head{
+  background-color: #ffeeff;
 }
 
 img{
-  height: 55px;
+  height: 90px;
+  margin:0%
 }
 
 .elemento{

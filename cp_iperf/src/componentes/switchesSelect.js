@@ -22,7 +22,6 @@ function SwitchesSelect(){
     if (error) {
         return console.log(error);
     } else {
-        console.log("exito")
         return (
             switches.forEach(swich => {
                 <option value={swich.id}>{swich.switch}</option>

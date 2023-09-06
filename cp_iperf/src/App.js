@@ -7,7 +7,7 @@ function App() {
   return (
     <>
     <Router>
-      <div className="navbar navbar-expand-lg navbar-light">
+      <div id="head" className="d-flex justify-content-center shadow-sm">
       <img src={logo} alt="" className="img"/>
       {/*<Link to="/" className='elemento'><img src={logo} alt="" style={{"height":"55px"}}/></Link>
         <div class="collapse navbar-collapse">
@@ -20,6 +20,9 @@ function App() {
             </li>
           </ul>
         </div>*/}
+      </div>
+      <div className="mt-2 ms-2 mr-3">
+        <SwitchesScreen/>
       </div>
         <Routes>
           <Route path='/switches' element={<SwitchesScreen/>} />
