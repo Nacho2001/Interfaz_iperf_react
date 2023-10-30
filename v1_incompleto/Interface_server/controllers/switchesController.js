@@ -1,5 +1,5 @@
 // Realiza la peticion al model
-const switchesModel = require("./../models/switchesModel");
+const switchesModel = require("../models/switchesModel");
 
 // Obtener lista de switches
 exports.getSwitchesList = async(req,res) => {
